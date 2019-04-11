@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- Add packages here -->
+	<package name="p1" extends="struts-default" namespace="/n1">
+		<action name="hello" class="com.chan21252.web.action.HelloAction" method="sayHello">
+			<result name="success">/success.jsp</result>
+		</action>
+	</package>
+
+    <package name="p2" extends="p1" namespace="/n1/n2" >
+        <default-class-ref class="com.chan21252.web.action.DefaultAction"/>
+        <!-- 定义action的不同做法 -->
+        <action name="login" class="com.chan21252.web.action.LoginAction">
+            <result name="success">/login-success.jsp</result>
+        </action>
+
+        <action name="login2" class="com.chan21252.web.action.LoginAction2" method="login">
+            <result name="success">/login-success.jsp</result>
+        </action>
+
+        <action name="login3">
+            <result name="success">/login-success.jsp</result>
+        </action>
+
+    </package>
+
+    <!-- 更改action后缀 -->
+    <!--
+	<constant name="struts.action.extension" value="php"></constant>
+	-->
+
+    <!-- 开启开发者模式 -->
+    <constant name="struts.devMode" value="true" />
+
+</struts>
