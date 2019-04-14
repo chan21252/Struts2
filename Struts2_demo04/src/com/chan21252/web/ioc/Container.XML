@@ -1,0 +1,6 @@
+<request>
+    <action>
+        <name>action1</name>
+        <method>add</method>
+    </action>
+</request>
