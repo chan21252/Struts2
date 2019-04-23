@@ -20,7 +20,7 @@ public class JDBCUtil {
             pro.load(is);
             ds = DruidDataSourceFactory.createDataSource(pro);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 

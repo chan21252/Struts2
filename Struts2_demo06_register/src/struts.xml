@@ -5,7 +5,7 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.devMode" value="false"/>
     <package name="user" extends="struts-default" namespace="/user">
         <action name="register" class="com.chan21252.struts.web.action.UserAction" method="register">
         </action>
