@@ -13,7 +13,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         System.out.println(user);
 
         UserService us = new UserServiceImpl();
-        us.register(user);
+        //us.register(user);
         return NONE;
     }
 

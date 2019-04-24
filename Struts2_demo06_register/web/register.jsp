@@ -6,12 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <html>
 <head>
     <title>注册页面</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/user/register.action" method="post">
+<s:fielderror/>
+<form action="<s:url namespace="/user" action="register"/>" method="post">
     用户名：<input type="text" name="username" />
     <br/>
     密码：<input type="password" name="password" />
